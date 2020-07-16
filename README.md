@@ -12,4 +12,4 @@
   
 
 ## Requirements
-- Django>=3.0.0
+- Django>=3.0
