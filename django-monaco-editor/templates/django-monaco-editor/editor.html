@@ -1,0 +1,29 @@
+{% load i18n %}
+
+<div class="custom-area">
+
+    {{ textarea_widget }}
+
+    <div class="toolbar">
+        <div class="toolbar-item view">
+            <a class="view-tab">编辑</a>
+            <a class="view-tab">预展</a>
+            <a class="view-size">最大化</a>
+            <a class="view-divide">分屏</a>
+        </div>
+
+        <div class="toolbar-item shortcuts">
+            <a class="bold">加粗</a>
+            <a class="italic">斜体</a>
+            <a class="underline">下划线</a>
+            <a class="line-between">分隔线</a>
+            <a class="code">代码块</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="editor-id" class="content-item"></div>
+        <div id="preview-id" class="content-item markdown-body"></div>
+    </div>
+
+</div>

@@ -1,0 +1,135 @@
+textarea[use-monaco-editor="true"] {
+    display: none;
+}
+
+.iPadShowKeyboard { /*【monaco-editor】移动端上不显示iPadShowKeyboard*/
+    display: none;
+}
+
+.custom-area {
+    height: 100%;
+    width: 100%;
+    padding-top: 36px;
+}
+
+@media (max-width: 767px) {
+    .custom-area {
+        padding-top: 0;
+    }
+
+    .form-row { /*【django】解决.content在缩小窗口时，右边距不显示问题*/
+        width: calc(100vw);
+    }
+}
+
+.custom-area .toolbar {
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.custom-area .toolbar .toolbar-item a {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #008c8c;
+}
+
+.custom-area .toolbar .toolbar-item:first-child {
+    margin-left: 12px;
+}
+
+.custom-area .toolbar .toolbar-item:last-child {
+    margin: 0 12px;
+}
+
+.custom-area .content {
+    height: 100%;
+}
+
+.custom-area .content .content-item {
+    height: 260px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+}
+
+.custom-area .content #preview-id {
+    display: none;
+    overflow: auto;
+    padding: 10px;
+}
+
+/*解决单行内容过长的溢出问题*/
+@media (min-width: 768px) {
+    .custom-area .content {
+        width: calc(100vw - 60px - 20px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .custom-area .content {
+        width: calc(100vw - 80px - 20px);
+    }
+}
+
+/*预展*/
+.custom-area-preview .toolbar .shortcuts,
+.custom-area-preview .content #editor-id {
+    display: none;
+}
+
+.custom-area-preview .content #preview-id {
+    display: block;
+}
+
+/*分屏*/
+.custom-area-divide .toolbar .shortcuts,
+.custom-area-divide .content #editor-id,
+.custom-area-divide .content #preview-id {
+    display: block;
+}
+
+.custom-area-divide .toolbar .view .view-tab {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/*全屏*/
+.full-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    height: 100%;
+    padding: 0;
+}
+
+.full-screen .content {
+    position: relative;
+    height: 100%;
+}
+
+.full-screen .content .content-item {
+    height: calc(100vh - 32px);
+    width: calc(100vw);
+}
+
+.full-screen .content #preview-id {
+    width: calc(100vw - 22px);
+}
+
+@media (min-width: 767px) {
+    .full-screen .content #preview-id {
+        width: calc(100vw - 42px);
+        padding: 20px;
+    }
+}
+
+/*全屏-分屏*/
+.full-screen .divided-content .content-item {
+    height: calc(50vh - 16px);
+}
+
