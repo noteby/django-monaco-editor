@@ -5,7 +5,7 @@ from django.template.loader import get_template
 
 class MonacoEditorWidget(forms.Textarea):
     def render(self, name, value, attrs=None, renderer=None):
-        custom_template = 'django-monaco-editor/editor.html'
+        custom_template = 'django_monaco_editor/editor.html'
         ace_attrs = {
             'use-monaco-editor': 'true',
         }
