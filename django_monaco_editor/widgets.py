@@ -18,14 +18,14 @@ class MonacoEditorWidget(forms.Textarea):
         css = {
             'all': (
                 'external/css/github-markdown.css',
-                'django-monaco-editor/css/editor.css',
+                'django_monaco_editor/css/editor.css',
             ),
         }
 
         js = (
             'external/js/marked.min.js',
             'external/monaco-editor/min/vs/loader.js',
-            'django-monaco-editor/js/editor.js',
+            'django_monaco_editor/js/editor.js',
         )
 
 
