@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# PyCharm
+.idea
+
+# Yarn
+node_modules/
+yarn.lock
+
+# Demo
+demo/

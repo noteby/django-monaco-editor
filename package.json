@@ -1,0 +1,21 @@
+{
+  "name": "django-monaco-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "",
+  "author": "noteby",
+  "license": "MIT",
+  "dependencies": {
+    "github-markdown-css": "^4.0.0",
+    "marked": "^1.1.1",
+    "monaco-editor": "^0.20.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
