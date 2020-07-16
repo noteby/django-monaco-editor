@@ -15,6 +15,12 @@
 
 
 ## Usage
+**Install the package**
+```bash
+pip install -i https://pypi.org/simple/ django-monaco-editor
+```
+
+
 **Installed Apps**
 ```python
 INSTALLED_APPS = [
@@ -31,6 +37,20 @@ INSTALLED_APPS = [
 
 ```
 
+**Model**
+```python
+from django.db import models
+from django_monaco_editor.models import MonacoEditorModelField
+
+
+# Create your models here.
+
+class AppModel(models.Model):
+    title = models.CharField(max_length=16)
+    content = MonacoEditorModelField()
+
+```
+
 **Admin**
 ```python
 from django.db import models
@@ -40,7 +60,7 @@ from app.models import AppModel
 
 # Register your models here.
 
-@admin.register(Post)
+@admin.register(AppModel)
 class AppModelAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': AdminMonacoEditorWidget}
@@ -48,16 +68,3 @@ class AppModelAdmin(admin.ModelAdmin):
 
 ```
 
-**Model**
-```python
-from django.db import models
-from django_monaco_editor.models import MonacoEditorModelField
-
-
-# Create your models here.
-
-class Post(models.Model):
-    title = models.CharField(max_length=16)
-    content = MonacoEditorModelField()
-
-```
