@@ -135,5 +135,6 @@ dmypy.json
 node_modules/
 yarn.lock
 
-# Demo
-demo/
+# Django
+**/migrations/[0-9]*.py
+!**/migrations/__init__.py
